@@ -1,0 +1,8 @@
+body {
+    background: lightgray !important;
+}
+
+.contenedor {
+    width: 50%;
+    margin: auto;
+}
