@@ -2,8 +2,6 @@ document.getElementById('enviar').addEventListener('click', function () {
 
     let nombre = document.getElementById('nombre').value.trim();
 
-    let edad = document.getElementById('edad').value.trim();
-
     let correo = document.getElementById('correo').value.trim();
 
     let telefono = document.getElementById('telefono').value.trim();
@@ -22,16 +20,6 @@ document.getElementById('enviar').addEventListener('click', function () {
         document.getElementById('nombre').classList.remove('is-invalid');
         document.getElementById('nombreError').style.display = 'none';
     }
-
-
-    if (edad === "" || parseInt(edad) < 18) {
-        document.getElementById('edad').classList.add('is-invalid');
-        return;
-    } else {
-        document.getElementById('edad').classList.remove('is-invalid');
-        document.getElementById('edadError').style.display = 'none';
-    }
-
 
     if (correo === "" || !validateEmail(correo)) {
         document.getElementById('correo').classList.add('is-invalid');
