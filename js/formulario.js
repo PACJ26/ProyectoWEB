@@ -1,5 +1,9 @@
 document.getElementById('enviar').addEventListener('click', function () {
     let nombre = document.getElementById('nombre').value.trim();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 539ec0e811181eff4458e03c67b59c13de21cc64
     let correo = document.getElementById('correo').value.trim();
     let telefono = document.getElementById('telefono').value.trim();
     let fechaLlegada = document.getElementById('fechaLlegada').value.trim();
