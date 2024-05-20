@@ -8,6 +8,7 @@
 body {
     min-height: 100vh;
     background: #36474f;
+    overflow-x: hidden; 
 }
 
 header {
@@ -187,22 +188,24 @@ footer{
     }
 
     header.active nav {
-        display: initial;
+        display: block; /* Cambiado de "initial" a "block" */
     }
 
     header nav ul li {
         width: 100%;
+        text-align: center; /* Alinea los elementos del menú al centro */
     }
 
     header nav ul li ul {
-        position: relative;
+        position: static; /* Cambiado de "relative" a "static" */
         width: 100%;
         left: 0;
+        display: none; /* Oculta los submenús por defecto */
     }
 
     header ul li ul li ul {
         top: 0;
-        left: 0;
+        left: 100%; /* Cambiado de "0" a "100%" */
     }
 
     header nav ul li:hover ul li {
@@ -214,35 +217,34 @@ footer{
         width: 30px;
         height: 20px;
         cursor: pointer;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .Hamburguesa::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 5px;
-        background: #fff;
-        transform: translateY(-12px);
-        box-shadow: 0 12px #fff;
-    }
-
+    .Hamburguesa::before,
     .Hamburguesa::after {
         content: '';
         position: absolute;
         width: 100%;
         height: 5px;
         background: #fff;
-        transform: translateY(12px);
+        transition: transform 0.3s ease; /* Agregado efecto de transición */
+    }
+
+    .Hamburguesa::before {
+        transform: translateY(-8px); /* Ajusta la posición vertical de las barras */
+    }
+
+    .Hamburguesa::after {
+        transform: translateY(8px); /* Ajusta la posición vertical de las barras */
     }
 
     header.active .Hamburguesa::before {
-        transform: rotate(45deg);
-        box-shadow: 0 0 #fff;
+        transform: rotate(45deg) translateY(0); /* Agrega rotación y ajusta la posición vertical */
     }
 
     header.active .Hamburguesa::after {
-        transform: rotate(315deg);
+        transform: rotate(-45deg) translateY(0); /* Agrega rotación y ajusta la posición vertical */
     }
 }
