@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 .btn-primary:hover {
-    background-color: #074173; /* Cambiar al color deseado */
-    border-color: black; /* Cambiar al color deseado */
+    display: flex;
+    background-color: #074173;
+    border-color: black; 
 }

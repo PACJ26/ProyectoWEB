@@ -1,9 +1,8 @@
 document.getElementById('enviar').addEventListener('click', function () {
     let nombre = document.getElementById('nombre').value.trim();
-<<<<<<< HEAD
-=======
-
->>>>>>> 539ec0e811181eff4458e03c67b59c13de21cc64
+    let apellido = document.getElementById('apellido').value.trim();
+    let documento = document.getElementById('documento').value.trim();
+    let tipodocumento = document.getElementById('tipodocumento').value.trim();
     let correo = document.getElementById('correo').value.trim();
     let telefono = document.getElementById('telefono').value.trim();
     let fechaLlegada = document.getElementById('fechaLlegada').value.trim();
@@ -18,6 +17,27 @@ document.getElementById('enviar').addEventListener('click', function () {
     } else {
         document.getElementById('nombre').classList.remove('is-invalid');
         document.getElementById('nombreError').style.display = 'none';
+    }
+    if (apellido === "" || apellido.length > 45) {
+        document.getElementById('apellido').classList.add('is-invalid');
+        return;
+    } else {
+        document.getElementById('apellido').classList.remove('is-invalid');
+        document.getElementById('apellidoError').style.display = 'none';
+    }
+    if (documento === "" || documento.length > 15) {
+        document.getElementById('documento').classList.add('is-invalid');
+        return;
+    } else {
+        document.getElementById('documento').classList.remove('is-invalid');
+        document.getElementById('documentoError').style.display = 'none';
+    }
+
+    if (tipodocumento === "") {
+        document.getElementById('tipodocumentoError').style.display = 'block';
+        return;
+    } else {
+        document.getElementById('tipodocumentoError').style.display = 'none';
     }
 
     if (correo === "" || !validateEmail(correo)) {
