@@ -16,23 +16,46 @@ body {
     background-color: #f8f9fa;
 }
 
-.carousel-item img {
-    max-width: 100%;
+/*diseño carousel*/
+.carousel {
+    max-width: 845px;
+    margin: 0 auto;
+}
+.carousel-inner img {
+    width: 100%;
     height: auto;
 }
 
-#carouselExampleFade {
-    width: 100%; 
-    height: 480px; 
-    overflow: hidden; 
+.card {
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
 }
 
-#carouselExampleFade {
-    padding: 20px; 
-    margin: 0; 
+.card-img-top {
+    max-height: 350px; /* Altura máxima para las imágenes */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor manteniendo la relación de aspecto */
 }
 
-.bloque1{
+/* Estilos adicionales para el texto dentro de las tarjetas */
+.card-body {
+    padding: 20px; /* Espaciado interno */
+}
+
+.card-title {
+    font-size: 20px; /* Tamaño de fuente del título */
+    margin-bottom: 15px; /* Espacio inferior del título */
+}
+
+.card-text {
+    font-size: 15px; /* Tamaño de fuente del texto */
+    line-height: 1.3; /* Altura de línea para mejor legibilidad */
+}
+
+.title{
+    text-align: center;
+}
+
+
+.bloque{
     background: #fff;
     margin: 20px;
     padding: 20px;
